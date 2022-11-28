@@ -1,0 +1,36 @@
+.task{
+    background-color: var(--card-background);
+    width: 220px;
+    padding: 20px 16px;
+    border-radius: 12px;
+}
+
+.task__img{
+    border-radius: 12px;
+    display: block;
+    margin: auto;
+}
+
+.task__name{
+   text-align: center;
+   font-size: 14px;
+   margin-top: 14px;
+   color: var(--text);
+}
+
+.task__details{   
+    display: flex;
+    margin-top: 16px;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: var(--text);
+
+}
+
+.task__oldTask{
+ text-decoration: line-through;
+}
+
+.task__newTask{
+    font-weight: bold;
+   }

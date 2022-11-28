@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+//import Navegacion from './componentes/Navegacion';
+import TaskContainer from './componentes/TaskContainer';
+import { Task } from './componentes/Task';
+//import './App.css';
+import data from './json/task.json';
+ console.log(data);  
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   
+       <TaskContainer>
+        {data.map( tarjetas=>
+         <Task 
+         key={tarjetas.name}
+         name={tarjetas.name}
+         oldTask={tarjetas.oldTask}
+         newTask={tarjetas.newTask}
+         /> 
+          )}
+               
+       </TaskContainer>
+ 
   );
 }
 
